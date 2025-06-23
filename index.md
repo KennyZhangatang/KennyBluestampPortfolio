@@ -13,7 +13,7 @@ The alarm clock mat is my alternative to a regular alarm clock. To make early mo
 
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 
-<img src="KenZ.HEIC" alt="chopped cheese">
+<img src="KenZ.jpg" alt="chopped cheese">
   
 # Final Milestone
 
