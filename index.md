@@ -1,5 +1,5 @@
 # Alarm Clock Mat
-The alarm clock mat is my alternative to a boring alarm clock and my attempt to make earning mornings a little more bearable. The functionality of this project, forcing me to actually get out of bed and put my feet on the ground in order to silence the alarm. I chose this project due to the practical uses and rewarding feelings that come from making something that you can use. 
+The alarm clock mat is my alternative to a regular alarm clock. To make early mornings a little more bearable, this alarm clock mat makes you get out of bed by only turning off after you step on the mat for around 10 seconds.  I chose this project due to the practical uses of helping me wake up and rewarding feelings that come from making something that you can use. 
 
 You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
 ```HTML 
