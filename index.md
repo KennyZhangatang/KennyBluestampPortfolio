@@ -85,7 +85,7 @@ void loop()
 <img src="finalCrop.png" alt="chopped cheese">
 
 
-Figure 2: This is the schematic for building milestone 2
+Figure 2: This is the schematic for building milestone 2. This is very similar to miletone 1, except that instead of the LED blinking when the button is pressed, that output is changed to a speaker turning off. The schematic is a good thing to build to get a sense of how the button interacts with the speaker, and then the next step should be building the cardboard button with tinfoil, essentially making a DIY button with wires hooked up to the tinfoil. 
 
 # First Milestone
 
@@ -124,7 +124,7 @@ void loop() {
 ```
 <img src="Screenshot 2025-06-24 122852.png" alt="chopped cheese">
 
-Figure 1: the schematic for milestone 1
+Figure 1: This is my schematic for building the first milestone. In this project, the button is hooked up to hole 2 on the arduino board, which is then set as the input with our code. The button state is constantly being checked, and whenever the button is pressed, the new state will show up in the serial monitor. Also, the LED on the arduino next to hole 13 will blink when the button is pressed. 
 
 # Starter Project 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/i_Qjy-UGgfA?si=mueceY7raRXJ3AkQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
