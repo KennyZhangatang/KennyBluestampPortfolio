@@ -83,6 +83,8 @@ void loop()
 ```
 
 <img src="finalCrop.png" alt="chopped cheese">
+
+
 Figure 2: This is the schematic for building milestone 2
 
 # First Milestone
@@ -121,6 +123,7 @@ void loop() {
 }
 ```
 <img src="Screenshot 2025-06-24 122852.png" alt="chopped cheese">
+
 Figure 1: the schematic for milestone 1
 
 # Starter Project 
