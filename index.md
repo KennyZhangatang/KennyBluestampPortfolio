@@ -85,7 +85,7 @@ void loop()
 <img src="finalCrop.png" alt="chopped cheese">
 
 
-Figure 2: This is the schematic for building milestone 2. This is very similar to miletone 1, except that instead of the LED blinking when the button is pressed, that output is changed to a speaker turning off. The schematic is a good thing to build to get a sense of how the button interacts with the speaker, and then the next step should be building the cardboard button with tinfoil, essentially making a DIY button with wires hooked up to the tinfoil. 
+Figure 2: This is the schematic for building milestone 2. This is very similar to milestone 1, except that instead of the LED blinking when the button is pressed, that output is changed to a speaker turning off. The schematic is a good thing to build to get a sense of how the button interacts with the speaker, and then the next step should be building the cardboard button with tinfoil, essentially making a DIY button with wires hooked up to the tinfoil. 
 
 # First Milestone
 
