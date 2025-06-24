@@ -39,6 +39,7 @@ For my second milestone, I built the main framework of my project—a large push
 
 One major challenge was making sure the foil layers didn’t touch when no pressure was applied. I solved this by adding more layers of cardboard and using popsicle sticks as spacers to act as a buffer. Another issue was debugging the original source code I used. The code had a variable called flag meant to track how long the button was being pressed, but it wasn’t working correctly. I fixed it by changing the logic to use while flag > 0, which allowed the button press to be properly detected and the timer to be looped.
 Here's the code:
+```c++
 // Written by Arpan Mondal. Free to use and share!
 int alarm_time = 0;
 
@@ -78,6 +79,9 @@ void loop()
     Serial.println("we did a loop");
 
 }
+
+```
+
 
 
 
