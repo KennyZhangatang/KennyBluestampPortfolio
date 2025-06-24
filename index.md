@@ -121,7 +121,7 @@ void loop() {
   }
 }
 ```
-Schematic: 
+Schematic: <img src="Screenshot 2025-06-24 122852.png" alt="chopped cheese">
 
 # Starter Project 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/i_Qjy-UGgfA?si=mueceY7raRXJ3AkQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
