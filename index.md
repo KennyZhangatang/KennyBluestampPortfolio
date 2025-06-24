@@ -11,7 +11,7 @@ The alarm clock mat is my alternative to a regular alarm clock. To make early mo
 |:--:|:--:|:--:|:--:|
 | Kenneth Z | Army and Navy Academy | Electrical Engineering | Incoming Sophmore
 
-**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
+<!---**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**-->
 
 <img src="KenZ.jpg" alt="chopped cheese">
   
