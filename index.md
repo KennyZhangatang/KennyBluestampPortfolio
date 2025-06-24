@@ -94,7 +94,7 @@ For my first milestone, I successfully programmed a button to turn on an LED and
 The RGB slider that was my starter project included 3 key components fitted together with soldering: a circuit board, 3 sliders, and a LED light. Power came from a USB-C port on the side of the circuit board, and the 3 sliders adjusted the amount of red, blue, and green light shown in the LED light. By moving the sliders up and down, the user can adjust the color of the LED light, mixing the colors together to produce the intended light color. 
 
 # Schematics 
-<img src="Screenshot 2025-06-24 095205.png" alt="chopped cheese">
+<img src="finalCrop.png" alt="chopped cheese">
 
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
