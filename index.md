@@ -96,6 +96,7 @@ The RGB slider that was my starter project included 3 key components fitted toge
 # Schematics 
 <img src="finalCrop.png" alt="chopped cheese">
 
+Figure 1: This schematic is for the initial project without any modifications. In the final project replace the arduino with an ESP32. 
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
