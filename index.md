@@ -15,7 +15,7 @@ The alarm clock mat is my alternative to a regular alarm clock. To make early mo
 
 <img src="KenZ.jpg" alt="chopped cheese">
   
-# Final Milestone
+<!--# Final Milestone
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
@@ -27,7 +27,7 @@ For your final milestone, explain the outcome of your project. Key details to in
 - A summary of key topics you learned about
 - What you hope to learn in the future after everything you've learned at BSE
 
-
+-->
 
 # Second Milestone
 
