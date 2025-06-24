@@ -7,7 +7,7 @@ The alarm clock mat is my alternative to a regular alarm clock. To make early mo
 <!--- Anything between these symbols will not render on the published site 
 ```-->
 
-| **Engineer** | **School** | **STEM** | **10** |
+| **Engineer** | **School** | **Area of Interest** | **Year** |
 |:--:|:--:|:--:|:--:|
 | Kenneth Z | Army and Navy Academy | Electrical Engineering | Incoming Sophmore
 
