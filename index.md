@@ -84,7 +84,7 @@ void loop() {
 
 }
 ```
-<img src="" alt="chopped cheese">
+<img src="IMG_9708.jpeg" alt="chopped cheese">
 
 # Second Milestone
 
