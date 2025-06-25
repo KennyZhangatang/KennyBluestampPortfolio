@@ -86,6 +86,10 @@ void loop() {
 ```
 <img src="IMG_9708.jpeg" alt="chopped cheese">
 
+
+
+Figure 3: this is the picture of the circuitry for milestone 3. Here, I simplified the design to just use a ESP8266 board, connected to my computer with a micro USB cord. After finalizing, I will connect the board up with the speaker and my button, using my code that I made to get the local time and add code to be able to get the buzzer to ring at set times. 
+
 # Second Milestone
 
 
