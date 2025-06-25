@@ -15,19 +15,76 @@ The alarm clock mat is my alternative to a regular alarm clock. To make early mo
 
 <img src="KenZ.jpg" alt="chopped cheese">
   
-<!--# Final Milestone
-
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+# Final Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
+For my final milestone, I successfully integrated an ESP8266 board with Adafruit IO using the Arduino IDE. My code now sends time-based updates to the Adafruit IO website, which plays a key role in my alarm clock mat by tracking when the alarm should trigger.
 
--->
+One of my biggest challenges was debugging the preexisting code, especially getting the ESP8266 to actually connect and communicate with Adafruit IO. A major triumph was getting the whole system to work and building the DIY part of the project — a cardboard button that interacts with my setup.
+
+During BSE, I learned about soldering, Ohm’s Law, C++ programming, and circuitry. After this experience, I’m excited to keep learning and improving my skills in electronics and coding.
+
+```c++
+#include "config.h"
+
+/************************ Example Starts Here *******************************/
+
+// this int will hold the current count for our sketch
+int count = 0;
+
+// set up the 'counter' feed
+AdafruitIO_Feed *counter = io.feed("counter");
+
+void setup() {
+
+  // start the serial connection
+  Serial.begin(115200);
+
+  // wait for serial monitor to open
+  while(! Serial);
+
+  Serial.print("Connecting to Adafruit IO");
+
+  // connect to io.adafruit.com
+  io.connect();
+
+  // wait for a connection
+  while(io.status() < AIO_CONNECTED) {
+    Serial.print(".");
+    delay(500);
+  }
+
+  // we are connected
+  Serial.println();
+  Serial.println(io.statusText());
+
+}
+
+void loop() {
+
+  // io.run(); is required for all sketches.
+  // it should always be present at the top of your loop
+  // function. it keeps the client connected to
+  // io.adafruit.com, and processes any incoming data.
+  io.run();
+
+  // save count to the 'counter' feed on Adafruit IO
+  Serial.print("sending -> ");
+  Serial.println(count);
+  counter->save(count);
+
+  // increment the count by 1
+  count++;
+
+  // Adafruit IO is rate limited for publishing, so a delay is required in
+  // between feed->save events. In this example, we will wait three seconds
+  // (1000 milliseconds == 1 second) during each loop.
+  delay(3000);
+
+}
+```
+<img src="" alt="chopped cheese">
 
 # Second Milestone
 
