@@ -1,5 +1,5 @@
 # Alarm Clock Mat
-The alarm clock mat is my alternative to a regular alarm clock. To make early mornings a little more bearable, this alarm clock mat makes you get out of bed by only turning off after you step on the mat for around 10 seconds.  I chose this project due to the practical uses of helping me wake up and rewarding feelings that come from making something that you can use. 
+The alarm clock mat is my alternative to a regular alarm clock. To make early mornings a little more bearable, this alarm clock mat makes you get out of bed by only turning off after you step on the mat for around 10 seconds.  I chose this project due to the practical uses of helping me wake up and rewarding feelings that come from making something that you can use. With my modification of being able to set an alarm whenever I want, I think this is an awesome project because it is a decent challenge along with being rewarding once completed. 
 
 <!---You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
 ```HTML 
@@ -119,6 +119,8 @@ void runAlarm() {
 
 <img src="Screenshot 2025-07-01 163516.png" alt="chopped cheese">
 
+
+<img src="Screenshot 2025-07-01 164445.png" alt="chopped cheese">
   
 # Third Milestone
 
