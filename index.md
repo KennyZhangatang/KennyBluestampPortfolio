@@ -11,9 +11,12 @@ The alarm clock mat is my alternative to a regular alarm clock. To make early mo
 |:--:|:--:|:--:|:--:|
 | Kenneth Z | Army and Navy Academy | Electrical Engineering | Incoming Sophmore
 
+<img src="KenZ.jpg" alt="chopped cheese">
+
 <!---**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**-->
 #  Final Milestone
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PHB6SvDTX4I?si=OO0PYsl0Nc39lFLJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 For this milestone, I successfully integrated the Arduino IDE with Adafruit IO, allowing my ESP8266 to communicate with a web-based dashboard. This setup provided a simple and effective way to set alarms remotely using a text input feed. Once I had the IDE and libraries properly configured, I was able to send alarm times from the Adafruit dashboard to the ESP8266, which then compared them to the current time using an NTP (Network Time Protocol) client. This cloud-based control method made testing and triggering alarms much more intuitive and accessible.
 
@@ -115,7 +118,7 @@ void runAlarm() {
 ```
 
 
-<img src="KenZ.jpg" alt="chopped cheese">
+
   
 # Third Milestone
 
