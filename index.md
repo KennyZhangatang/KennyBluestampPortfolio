@@ -12,14 +12,116 @@ The alarm clock mat is my alternative to a regular alarm clock. To make early mo
 | Kenneth Z | Army and Navy Academy | Electrical Engineering | Incoming Sophmore
 
 <!---**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**-->
+#  Final Milestone
+
+
+For this milestone, I successfully integrated the Arduino IDE with Adafruit IO, allowing my ESP8266 to communicate with a web-based dashboard. This setup provided a simple and effective way to set alarms remotely using a text input feed. Once I had the IDE and libraries properly configured, I was able to send alarm times from the Adafruit dashboard to the ESP8266, which then compared them to the current time using an NTP (Network Time Protocol) client. This cloud-based control method made testing and triggering alarms much more intuitive and accessible.
+
+The next step involved wiring a piezo buzzer and a button to the ESP8266 to create a physical response to the alarms. During testing, I realized that instead of using regular numeric pin references like `2` or `6`, I needed to use the ESP8266's labeled pin names like `D2` and `D6` to ensure compatibility. Debugging involved adjusting the buzzer logic and verifying correct GPIO behavior, which led to modifying the code to correctly control the buzzer and read button input. This phase of the project helped me better understand how to map digital pins on the ESP8266 and reinforced the importance of hardware-software alignment when integrating components.
+
+```c++
+#include "config.h"
+#include <WiFiUdp.h>
+#include <NTPClient.h>
+
+WiFiUDP ntpUDP;
+NTPClient timeClient(ntpUDP, "pool.ntp.org", -7 * 3600, 60000);  // Pacific Time (UTC-7)
+
+String alarmTime = " ";  // user-specified alarm time
+
+AdafruitIO_Feed *alarmTimeFeed = io.feed("time");
+AdafruitIO_Feed *counter = io.feed("counter");
+
+int count = 0;
+int flag = 0;
+bool alarmShouldTrigger = false;
+
+// Buzzer and button pins
+const int buzzerPin = D6;
+const int buttonPin = D2;
+
+void handleMessage(AdafruitIO_Data *data) {
+  Serial.print("received <- ");
+  Serial.println(data->value());
+  alarmTime = String(data->value());
+}
+
+void setup() {
+  Serial.begin(115200);
+  delay(1000); // Give time for Serial to initialize
+
+  pinMode(buzzerPin, OUTPUT);
+  pinMode(buttonPin, INPUT);
+
+  Serial.println("Connecting to Adafruit IO...");
+  io.connect();
+
+  // Subscribe to alarm time feed
+  alarmTimeFeed->onMessage(handleMessage);
+
+  // Wait for connection
+  while(io.status() < AIO_CONNECTED) {
+    Serial.print(".");
+    delay(500);
+  }
+
+  Serial.println();
+  Serial.println("Connected to Adafruit IO!");
+  timeClient.begin();  // Start NTP time client
+}
+
+void loop() {
+  io.run();            // Always run this first
+  timeClient.update(); // Update time
+
+  String currentTime = timeClient.getFormattedTime().substring(0, 5);
+  Serial.print("Current Time: ");
+  Serial.println(currentTime);
+
+  // Send count to Adafruit IO
+  Serial.print("Sending count -> ");
+  Serial.println(count);
+  counter->save(count);
+  count++;
+
+  // Trigger alarm logic
+  if (currentTime.equals(alarmTime) && alarmTime.length() > 0 && !alarmShouldTrigger) {
+    Serial.println("⏰ ALARM TRIGGERED!");
+    alarmShouldTrigger = true;  // Prevent retriggering until done
+    runAlarm();
+  }
+
+  delay(3000); // Adafruit IO rate limit buffer
+}
+
+void runAlarm() {
+  flag = 10; // Reset flag counter (10 presses to stop)
+  while (flag >= 0) {
+    Serial.println("🔁 Buzzing...");
+    digitalWrite(buzzerPin, HIGH);
+    delay(500);
+    digitalWrite(buzzerPin, LOW);
+    delay(500);
+
+    if (digitalRead(buttonPin) == HIGH) {
+      Serial.println("🔕 Button pressed.");
+      flag--;
+    }
+  }
+
+  Serial.println("✅ Alarm stopped.");
+  alarmShouldTrigger = false; // Reset alarm trigger
+}
+```
+
 
 <img src="KenZ.jpg" alt="chopped cheese">
   
-# Final Milestone
+# Third Milestone
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rwGHVvC6vbk?si=D1LPW629mrfqtRGU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m4v1c9e7zp0?si=aY94Shd8bWKJ8hXu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For my final milestone, I successfully integrated an ESP8266 board with Adafruit IO using the Arduino IDE. My code now sends time-based updates to the Adafruit IO website, which plays a key role in my alarm clock mat by tracking when the alarm should trigger.
+For my third milestone, I successfully integrated an ESP8266 board with Adafruit IO using the Arduino IDE. My code now sends time-based updates to the Adafruit IO website, which plays a key role in my alarm clock mat by tracking when the alarm should trigger.
 
 One of my biggest challenges was debugging the preexisting code, especially getting the ESP8266 to actually connect and communicate with Adafruit IO. A major triumph was getting the whole system to work and building the DIY part of the project — a cardboard button that interacts with my setup.
 
