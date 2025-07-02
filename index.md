@@ -121,6 +121,8 @@ void runAlarm() {
 
 
 <img src="Screenshot 2025-07-01 164445.png" alt="chopped cheese">
+
+<img src="Screenshot 2025-07-02 113012.png" alt="chopped cheese">
   
 # Third Milestone
 
