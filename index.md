@@ -311,5 +311,5 @@ The RGB slider that was my starter project included 3 key components fitted toge
 | Floor mat | The padding I actually step on to defuse the alarm | $15 | <https://a.co/d/iSu9joU>  |  
 | Reynolds Aluminum foil| Conductor for the button | $14 | <https://a.co/d/9MRLwEK> |
 | Cardboard | Building material | free |
-
+| ESP8266 Circuit Board | The controller used for the final project, with wifi capabilities | $8 | <https://a.co/d/eDn4Lwi> |
 
